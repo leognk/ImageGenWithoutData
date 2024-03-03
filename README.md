@@ -1,6 +1,6 @@
 # Generating a Complex Dataset From Nothing
 
-The goal is to generate a "complex" and "interesting" dataset with a neural net, a bit like GANs, but without any dataset. The ideal end goal would be to generate something as complex as human language, with an underlying "world model", from scratch. The idea is to use a decoder that generates data points from random latent vectors and an autoencoder that compresses then reconstructs the generated data. The autoencoder minimizes its reconstruction error, while the decoder maximizes it to generate increasingly complex data. Here are some rudimentary results on images:
+The goal is to generate a "complex" and "interesting" dataset with a neural net, a bit like GANs, but without any dataset. Ideally, the end goal would be to generate something as complex as human language, with an underlying "world model", from scratch. The idea is to use a decoder that generates data points from random latent vectors and an autoencoder that compresses then reconstructs the generated data. The autoencoder minimizes its reconstruction error, while the decoder maximizes it to generate increasingly complex data. Here are some rudimentary results on images:
 
 <p align="center">
 Evolution of the generated images through training iterations </br>
