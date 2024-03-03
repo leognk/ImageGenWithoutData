@@ -2,14 +2,14 @@
 
 The goal is to generate a "complex", "interesting" dataset with a neural net, a bit like GANs, but without any dataset. The ideal end goal would be to generate something as complex as human language, with an underlying "world model", from scratch. The idea is to use a decoder that generates data points from random latent vectors, and an autoencoder that compresses then reconstructs the generated data. The autoencoder minimizes its reconstruction error, while the decoder maximizes it to generate increasingly complex data. Here are some rudimentary results on images:
 
-<p align="center"> Evolution of the generated images through training iterations </p>
 <p align="center">
+Evolution of the generated images through training iterations </br>
 <img width=200 src="images/exp1/20.gif">
 <img width=200 src="images/exp2/9_1.gif">
 </p>
 
-<p align="center"> Images sampled from different models after training </p>
 <p align="center">
+Images sampled from different models after training </br>
 <img width=200 src="images/extra/3.png">
 <img width=200 src="images/extra/4.png">
 <img width=200 src="images/exp1/2.png">
@@ -58,13 +58,13 @@ The generators (= decoders) consist of a stack of transposed convolutions, batch
 
 The model is a decoder followed by an autoencoder. The idea is to create a "complex" dataset for the autoencoder. The decoder generates images from random latent vectors, and the autoencoder compresses and reconstructs the generated images, minimizing the reconstruction error. Here, there is no masked modeling objective, but it would be an interesting direction to explore. For the autoencoder's task to be complex, the decoder maximizes the autoencoder's reconstruction error. This way, the decoder cannot generate something simple like uniform images, which would be too simple to autoencode, but it still must generate images that can be autoencoded, since it is conditioned on the input latent vector. The model is thus constrained to generate "complex" images. The level of complexity varies with the latent vectors dimensions.
 
-<p align="center"> Evolution of the generated images through training iterations </p>
 <p align="center">
+Evolution of the generated images through training iterations </br>
 <img width=150 src="images/exp1/20.gif">
 </p>
 
-<p align="center"> Images sampled from different models after training </p>
 <p align="center">
+Images sampled from different models after training </br>
 <img width=150 src="images/exp1/2.png">
 <img width=150 src="images/exp1/3.png">
 <img width=150 src="images/exp1/6.png">
@@ -77,8 +77,8 @@ The model is a decoder followed by an autoencoder. The idea is to create a "comp
 <img width=150 src="images/exp1/19.png">
 </p>
 
-An image sampled before training for reference:
 <p align="center">
+Image sampled before training for reference </br>
 <img width=150 src="images/exp1/18.png">
 </p>
 
@@ -86,13 +86,13 @@ An image sampled before training for reference:
 
 This is a variant of experiment 1 where we use 2 decoders and 2 autoencoders instead of just one. The 2 decoders generate images from random latent vectors and each autoencoder compresses and reconstructs the images generated from both decoders.
 
-<p align="center"> Evolution of the generated images through training iterations </p>
 <p align="center">
+Evolution of the generated images through training iterations </br>
 <img width=150 src="images/exp2/9_1.gif">
 </p>
 
-<p align="center"> Images sampled from different models after training </p>
 <p align="center">
+Images sampled from different models after training </br>
 <img width=150 src="images/exp2/1_2.png">
 <img width=150 src="images/exp2/2_1.png">
 <img width=150 src="images/exp2/3_1.png">
@@ -100,8 +100,8 @@ This is a variant of experiment 1 where we use 2 decoders and 2 autoencoders ins
 <img width=150 src="images/exp2/5_1.png">
 </p>
 
-An image sampled before training for reference:
 <p align="center">
+Image sampled before training for reference </br>
 <img width=150 src="images/exp2/6_1.png">
 </p>
 
