@@ -1,0 +1,16 @@
+{
+    "id": 14,
+    "seed": 12,
+    "n_epochs": 1000,
+    "batch_size": 32,
+    "dim_x": 2,
+    "n_clusters": 0,
+    "sigma_x": 0.1,
+    "n_ch": 3,
+    "n_maps_dec": 32,
+    "n_maps_enc": 32,
+    "lr_start": 0.01,
+    "lr_end": 0.01,
+    "lossR_factor": 1.0,
+    "lossE_factor": 0.0
+}
