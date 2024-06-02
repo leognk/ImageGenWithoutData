@@ -2,7 +2,7 @@
 
 The goal of this project is to generate a complex and interesting dataset with a neural net, but *without relying on any pre-existing dataset*. The ultimate goal is to generate something as complex as human language from scratch using only raw computational power.
 
-This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG.[1] Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
+This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG.[^1] Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
 
 In this preliminary work, the idea is to generate data with a decoder that maximizes the reconstruction error of an autoencoder. By competing with the autoencoder, the decoder is expected to generate increasingly complex data. Here are some rudimentary results on images:
 
@@ -26,7 +26,7 @@ Images sampled from different models after training </br>
 
 ## Goal
 
-Ideally, the goal is to generate a universal, intrinsically "complex" and "interesting" dataset on par with human language or real-world images/videos, using a neural net decoder trained without any prior data. This would involve a self-sufficient training procedure that maximizes the generated dataset's complexity. Then, we would use this infinite dataset to pretrain a kind of universal computation engine that can process any data that has been adapted for it with a lightweight stem/head, a bit like LLMs, but more general (see [2]).
+Ideally, the goal is to generate a universal, intrinsically "complex" and "interesting" dataset on par with human language or real-world images/videos, using a neural net decoder trained without any prior data. This would involve a self-sufficient training procedure that maximizes the generated dataset's complexity. Then, we would use this infinite dataset to pretrain a kind of universal computation engine that can process any data that has been adapted for it with a lightweight stem/head, a bit like LLMs[^2], but more general.
 
 A crucial hypothesis is that such a universal computation engine exists. More precisely, it means that there exists an abstract space shared by any complex datasets in which the patterns are similar for all datasets, such that any dataset translated into this abstract space can be further encoded by a single model without further training. This model would perform some sort of universal pattern recognition, maybe something akin to logical reasoning. If such a universal computation engine exists, there probably is an algorithm to build it.
 
@@ -111,6 +111,6 @@ Image sampled before training for reference </br>
 
 ## References
 
-[1]: Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
+[^1]: Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
 
-[2] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
+[^2] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
