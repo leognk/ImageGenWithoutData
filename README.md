@@ -1,6 +1,10 @@
-# Generating a Complex Dataset From Nothing
+# Generating a Complex Dataset From Compute
 
-The goal is to generate a "complex" and "interesting" dataset with a neural net, a bit like GANs, but without any dataset. Ideally, the end goal would be to generate something as complex as human language, with an underlying "world model", from scratch. The idea is to use a decoder that generates data points from random latent vectors and an autoencoder that compresses then reconstructs the generated data. The autoencoder minimizes its reconstruction error, while the decoder maximizes it to generate increasingly complex data. Here are some rudimentary results on images:
+The goal of this project is to generate a complex, interesting dataset with a neural net, but *without relying on any dataset*. The end goal is to generate something as complex as human language from scratch using only raw, pure compute.
+
+This possibility is supported by the strong ability of LLMs to compress images and audio while being trained only on text, beating domain-specific compressors like PNG [1]. By only looking at text, LLMs become general-purpose compressors. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create a powerful, universal compressor?"
+
+Here, the idea is to generate data with a decoder that maximizes an autoencoder's reconstruction error. By competing with the autoencoder, the decoder would generate increasingly complex data. Here are some rudimentary results on images:
 
 <p align="center">
 Evolution of the generated images through training iterations </br>
@@ -22,7 +26,7 @@ Images sampled from different models after training </br>
 
 ## Goal
 
-Ideally, the goal is to generate a universal, intrinsically "complex" and "interesting" dataset on par with human language or real-world images/videos, using a neural net decoder trained without any prior data. This would involve a self-sufficient training procedure that maximizes the generated dataset's complexity. Then, we would use this infinite dataset to pretrain a kind of universal computation engine that can process any data that has been adapted for it with a lightweight stem/head, a bit like LLMs, but more general (see "Pretrained Transformers as Universal Computation Engines" [1]).
+Ideally, the goal is to generate a universal, intrinsically "complex" and "interesting" dataset on par with human language or real-world images/videos, using a neural net decoder trained without any prior data. This would involve a self-sufficient training procedure that maximizes the generated dataset's complexity. Then, we would use this infinite dataset to pretrain a kind of universal computation engine that can process any data that has been adapted for it with a lightweight stem/head, a bit like LLMs, but more general (see [2]).
 
 A crucial hypothesis is that such a universal computation engine exists. More precisely, it means that there exists an abstract space shared by any complex datasets in which the patterns are similar for all datasets, such that any dataset translated into this abstract space can be further encoded by a single model without further training. This model would perform some sort of universal pattern recognition, maybe something akin to logical reasoning. If such a universal computation engine exists, there probably is an algorithm to build it.
 
@@ -107,4 +111,6 @@ Image sampled before training for reference </br>
 
 ## References
 
-[1] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
+[1] Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
+
+[2] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
