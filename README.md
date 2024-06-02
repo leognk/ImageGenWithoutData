@@ -2,7 +2,7 @@
 
 The goal of this project is to generate a complex and interesting dataset with a neural net, but *without relying on any pre-existing dataset*. The ultimate goal is to generate something as complex as human language from scratch using only raw computational power.
 
-This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG [1]. Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even if these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
+This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG [1]. Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
 
 In this preliminary work, the idea is to generate data with a decoder that maximizes the reconstruction error of an autoencoder. By competing with the autoencoder, the decoder is expected to generate increasingly complex data. Here are some rudimentary results on images:
 
