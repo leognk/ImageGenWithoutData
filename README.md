@@ -109,8 +109,6 @@ Image sampled before training for reference </br>
 <img width=150 src="images/exp2/6_1.png">
 </p>
 
-## References
-
 [^1]: Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
 
-[^2] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
+[^2]: Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
