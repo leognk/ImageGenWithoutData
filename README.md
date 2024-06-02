@@ -2,7 +2,7 @@
 
 The goal of this project is to generate a complex and interesting dataset with a neural net, but *without relying on any pre-existing dataset*. The ultimate goal is to generate something as complex as human language from scratch using only raw computational power.
 
-This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG.[^1] Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
+This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG.[1] Surprisingly, by only looking at text, LLMs become general-purpose compressors. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor?"
 
 In this preliminary work, the idea is to generate data with a decoder that maximizes the reconstruction error of an autoencoder. By competing with the autoencoder, the decoder is expected to generate increasingly complex data. Here are some rudimentary results on images:
 
@@ -111,6 +111,6 @@ Image sampled before training for reference </br>
 
 ## References
 
-[^1]: Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
+[1]: Grégoire Delétang, Anian Ruoss, Paul-Ambroise Duquenne, Elliot Catt, Tim Genewein, Christopher Mattern, Jordi Grau-Moya, Li Kevin Wenliang, Matthew Aitchison, Laurent Orseau, Marcus Hutter, and Joel Veness. Language Modeling Is Compression. arXiv preprint arXiv:2309.10668, 2023.
 
 [2] Kevin Lu, Aditya Grover, Pieter Abbeel, and Igor Mordatch. Pretrained Transformers as Universal Computation Engines. arXiv preprint arXiv:2103.05247, 2021.
