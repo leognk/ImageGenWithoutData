@@ -1,6 +1,6 @@
 # Generating a Complex Dataset From Compute
 
-The goal of this project is to generate a complex and interesting dataset with a neural net, but *without relying on any pre-existing dataset*. The ultimate goal is to generate something as complex as human language from scratch using only raw computational power.
+The goal of this project is to generate a complex and interesting synthetic dataset with a neural net, but *without relying on any pre-existing dataset*. The ultimate goal is to generate something as complex as human language from scratch using only raw computational power.
 
 This possibility is supported by the strong ability of LLMs to compress images and audio despite being trained solely on text, surpassing domain-specific compressors like PNG.[^1] Surprisingly, by only looking at text, LLMs become general-purpose compressors, probably by unlocking in-context compression. Even though these modalities are projections of the same world, they are still vastly different from each other. This raises the question: "Could there be a universal form of data, even more complex than human language, that could create the ultimate universal compressor that learns a strong in-context compression ability?"
 
